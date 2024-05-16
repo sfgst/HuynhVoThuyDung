@@ -1,239 +1,98 @@
-
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-    list-style-type: none;
+:root{
+    --bg-color:#eb3e32;
 }
-li a{
-    text-decoration: none;
+.bg-mainmenu{
+    background-color: var(--bg-color);
 }
-
-*{
-    font-family: "Noto Serif", serif;
-    font-size: 18px;
-
+.bg-mainmenu a{
+    color: bisque;
+}
+.bg-footer
+{
+    background-color: dimgrey;
+    color: black;
+}
+.bg-footer a,
+.bg-footer p,
+.bg-footer span{
+    color: aliceblue;
 }
 
-#menu-item:hover a, #menu-item:focus-within a {
-    border: 1px solid #94e3df; 
-    border-radius: 20px;
-    color: #94e3df; 
+body {
+    font-family: Arial, sans-serif;
 }
-
-#dropdownMenu:hover > a,
-#dropdownMenu:focus-within > a {
-    border: 1px solid #94e3df; 
-    border-radius: 20px;
-    color: #94e3df; 
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-#dropdownMenu:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-#userDropdown:hover .dropdown-content {
-    display: block;
-}
-
-.search-form {
-    display: none;
-}
-
-.search-form.active {
-    display: block;
-}
-#image_banner #carouselExampleControls { 
-    display: flex; 
-    justify-content: center; 
-    margin-top: 20px;
-}
-.section_newletter{
-    padding: 60px 0;
-    background-color: #7F8A90;
-    background-image: url(//bizweb.dktcdn.net/100/353/542/themes/717234/assets/bg-newletter.jpg?1705908043844);
-}
-
-form {
-    margin-top: 30px;
-    unicode-bidi: isolate;
-    border-radius: 50px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.offset_banner1{
-    position: absolute;
-        top: 50%;
-        left: 35%;
-        transform: translate(-50%, 70%);
-        z-index: 1;
-}
-.offset_banner2{
-    position: absolute;
-        top: 50%;
-        left: 75%;
-        transform: translate(-50%, 70%);
-        z-index: 1;
-}
-body{
-    font-family: "Noto Serif", serif;
-    font-size: 20px;
-
-}
-
-.title_module_bbf .destitle {
-    display: inline-block;
-    font-family: "Noto Serif", serif;
-    font-size: 18px;
-    color: #292929;
-    font-weight: 400;
-    position: relative;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.title_module_bbf .destitle:before {
-    content: "";
-    width: 70px;
-    height: 5px;
+.logo {
     border-radius: 5px;
-    background: #94e3df;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
+    max-width: 100px;
+    max-height: 100px;
 }
-.section2 {
-    width: 500px;
-    text-align: center;
-    margin-top: 100px;
+.search-input, .search-button {
+    border-radius: 20px;
 }
-
-.descript{
-    font-style: italic;
+.navbar-toggler-icon {
+    background-color: #fff;
 }
-
-.section3 {
-    display: block;
-    width: 1000px;
-    text-align: center;
-    margin-top: 50px;
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
 }
-
-.sp1{
-    width: 150px;
-    background-color: #c3ead5;
-    border-radius: 10px;
-    margin: 20px;
-    color: white;
-
+.navbar-nav .nav-link:hover {
+    color: #007bff;
 }
-.item1{
-    padding: 20px;
+.carousel-item img {
+    max-height: 600px;
+    object-fit: cover;
 }
-
-.sp2{
-    width: 150px;
-    background-color: #f3cd97;
-    border-radius: 10px;
-    margin: 20px;
-    color: white;
-
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
 }
-.item2{
-    padding: 20px;
+.footer h4, .footer h5 {
+    color: #fff;
+}
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #fff;
 }
 
-.sp3{
-    width: 150px;
-    background-color: #95e0d2;
-    border-radius: 10px;
-    margin: 20px;
-    color: white;
-
-}
-.item3{
-    padding: 20px;
-}
-
-.sp4{
-    width: 150px;
-    background-color: #fa8383;
-    border-radius: 10px;
-    margin: 20px;
-    color: white;
-
-}
-.item4{
-    padding: 20px;
-}
-
-.searchmini {
-    width: 200px;
-    height: 40px;
-    position: absolute;
-}
-
-.section4 {
-    width: 1000px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.title_module_bbf h2.bf_flower:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 112px;
-    height: 54px;
-    background-image: url(//bizweb.dktcdn.net/100/353/542/themes/717234/assets/flower.png?1705908043844);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-}
-.title_module_bbf h2.bf_flower {
-    position: relative;
-    padding-top: 60px;
-}
-.title_module_bbf h2 {
-    font-family: "Noto Serif", serif;
-    font-size: 34px;
-    font-weight: 400;
-    color: #292929;
-    margin: 0 0 5px;
-    padding: 0;
-}
-.addCart:hover {
-    background-color: #95e0d2;
-    color: #95e0d2;
-    ;
-
-}
+    .icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    .contact-info .info-item {
+        background: #f8f9fa;
+        border-radius: 5px;
+        padding: 15px;
+    }
+    .contact-info .info-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-size: 1.1rem;
+    }
+    .form-control {
+        border-radius: 0.25rem;
+        box-shadow: none;
+        transition: border-color 0.2s;
+    }
+    .form-control:focus {
+        border-color: #dc3545;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.2s;
+    }
+    .btn:hover {
+        background-color: #c82333;
+    }

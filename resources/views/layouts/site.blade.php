@@ -1,196 +1,154 @@
-<div>
-    <!-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius -->
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>@yield('title')</title>
-        <link rel="stylesheet" href="{{ asset('css/layoutsite.css') }}">
-        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
-        
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@yield('title')</title>
+    
 
-        @yield('header')
-    </head>
-
-    <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('css/layoutsite.css')}}">
+    <link rel="stylesheet" href="{{asset('fontawesome-free-6.5.2-web/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('bootstrap-5.3.3-dist/css/bootstrap.min.css')}}">
+    @yield('header')
    
+</head>
+
+<body>
+    <!-- header -->
     <header>
-        <header class="header header-menu">
-            <div class="mb-2">
-                <div class="container mt-3">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3">
-                            <div class="logo-center">
-                                <div class="logo">
-                                    <a href="/" class="logo-wrapper">
-                                        <img src="https://bizweb.dktcdn.net/100/311/377/themes/672639/assets/logo.png?1676016674301" alt="lg Delta Cosmetic">
-                                    </a>
-                                </div>
-                            </div>
+        <section class="section_header bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="row w-100">
+                        <div class="col-sm-2 d-flex justify-content-center mt-4">
+                            <img src="{{asset('images/logo.webp')}}" class="logo img-fluid w-70 h-50" alt="logo"/>
                         </div>
-                        <div class="col-lg-7 col-md-7 padding-0 mt-4">
-                            <div class="wrap_main hidden-xs hidden-sm">
-                                <div class="bg-header-nav hidden-xs hidden-sm">
-                                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                            <li class="nav-item active" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="/">Trang chủ</a>
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="#">Giới thiệu</a>
-    
-                                            </li>
-                                            <li class="nav-item dropdown ms-3" id="dropdownMenu">
-                                                <a class="nav-link active" aria-current="page"
-                                                    href="http://127.0.0.1:5500/pages/product.html#"
-                                                    id="navbarDropdownMenuLink">Sản phẩm</a>
-                                                <ul class="dropdown-content" aria-labelledby="navbarDropdownMenuLink">
-                                                    <li><a class="dropdown-item mt-2" href="#">Giày cao gót</a></li>
-                                                    <li><a class="dropdown-item mt-2" href="#">Giày xăng đan</a></li>
-                                                    <li><a class="dropdown-item mt-2" href="#">Giày Búp bê</a></li>
-                                                    <li><a class="dropdown-item mt-2 " href="#">Giày the thao</a></li>
-                                                    <li><a class="dropdown-item mt-2" href="#">Giày the thao</a></li>
-                                                    
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
-    
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page"
-                                                    href="http://127.0.0.1:5500/pages/contact.html">Liên hệ</a>
-    
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="#">Chỉ đường</a>
-    
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="#">Login</a>
-    
-                                            </li>
+                        <div class="col-sm-8 py-4 d-flex align-items-center justify-content-between">
+                            <nav class="navbar navbar-expand-lg bg-light">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Trang chủ</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Sản phẩm
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Giày cao gót</a></li>
+                                                <li><a class="dropdown-item" href="#">Giày xăng đan</a></li>
+                                                <li><a class="dropdown-item" href="#">Giày thể thao</a></li>
+                                            </ul>
                                             
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Tin tức
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Tin mới</a></li>
+                                                <li><a class="dropdown-item" href="#">Tin thời trang</a></li>
+                                                <li><a class="dropdown-item" href="#">Tin hot</a></li>
+                                            </ul>
                                             
-                                        </ul>
-                                    </nav>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Liên hệ</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Chỉ đường</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Login</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 mt-4">
-                            <div class="row">
-                                <div class="inline-b hidden-xs col dropstart " id="userDropdown">
-                                    <span class="imguser">
-                                        <!-- <img src="" alt="user" id="userImage"> -->
-                                        <ul class="dropdown-content" id="userDropdownContent">
-                                            <li class="btn btn-success rounded-fill mt-3" style="width: 100px"><a
-                                                    class="dropdown-item mt-2" href="#">Đăng nhập</a></li>
-                                            <li class="btn border-secondary rounded-fill my-3" style="width: 100px"><a
-                                                    class="dropdown-item mt-2" href="#">Đăng ký</a></li>
-                                        </ul>
-                                    </span>
+                            </nav>
+                            <form class="search-form me-4">
+                                    <div style="display: flex;">
+                                        <input type="search" placeholder="Search" value=""
+                                            onchange="handleChange(event)" class="search-input rounded me-2"
+                                            aria-label="Search" style="flex: 1;" />
+                                        <button type="submit" class="buta search-button rounded">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
                                 </div>
-                                <!-- <div class="inline-block col">
-                                    <span class="">
-                                        <a href="#"><img src="" alt="cart"></a>
-                                    </span>
+                            <div class="col-sm-2 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-heart me-3"></i>
+                                    <i class="fas fa-bell me-3"></i>
+                                    <i class="fas fa-shopping-cart"></i>
                                 </div>
-                                <div class="inline-block col">
-                                    <span class="search">
-                                        <a href="#"><i class="fa-solid fa-magnifying-glass text-dark"></i></a>
-                                    </span>
-                                </div> -->
-                            </div>
-    
                         </div>
                     </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    
+
+    <main>
+        @yield('maincontent')
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>ĐĂNG KÝ NHẮN TIN</h4>
+                    <form>
+                        <input type="email" placeholder="Your email" class="form-control mb-2" />
+                        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                    </form>
+                    <h6 class="mt-3">KẾT NỐI VỚI CHÚNG TÔI</h6>
+                    <a href="#"><i class="fab fa-facebook-square facebook-icon"></i></a>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Fashion - THƯƠNG HIỆU</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tuyển Dụng</a></li>
+                        <li><a href="#">Hướng Dẫn</a></li>
+                    </ul>
+</div>
+<div class="col-sm-3">
+                    <h5>WE HERE</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Hướng dẫn mua</a></li>
+                        <li><a href="#">Tra cứu bảo hành</a></li>
+                        <li><a href="#">Quy định phiếu quà</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>CATEGORY</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Xu hướng</a></li>
+                        <li><a href="#">Giải đáp</a></li>
+                        <li><a href="#">Cẩm nang</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
                 </div>
             </div>
+        </div>
+    </footer>
     
-            <!-- <div class="my-5">
-                <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://bizweb.dktcdn.net/100/311/377/themes/672639/assets/slider_1.jpg?1676016674301" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://bizweb.dktcdn.net/100/311/377/themes/672639/assets/slider_1.jpg?1676016674301" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://bizweb.dktcdn.net/100/311/377/themes/672639/assets/slider_1.jpg?1676016674301" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span> 
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-    
-                <div class="container">
-                    <div class="section row" id="image-banner">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 offset_banner1">
-                            <a href="#" title="alt" class="block a-center">
-                                <img src="{{ asset('images/banner_offset_1.webp')}}" alt="alt">
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 offset_banner2">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <a href="#" title="alt" class="block a-center">
-                                    <img src="{{ asset('images/banner_offset_2.webp')}}" alt="alt">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </header>
-    </header>
-        <main>
-            @yield('maincontent')
-        </main>
-        <footer>
-            Footer 4 trang giong nhau
-        </footer>
-        @yield('footer')
-    </body>
-    <script src=" {{ asset('js/main.js') }}"></script>
-<script src="{{ asset('jquery/jquery-3.7.1.min.js') }}"></script>
-<script src="{{ asset('fontawesome/js/all.min.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-    // Owl Carousel initialization
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 4
-            }
-        }
-    })
-</script>
-    </html>
-</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('js/main.js')}}"></script>
+    @yield('footer')
+</body>
+
+</html>
